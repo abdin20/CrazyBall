@@ -11,6 +11,8 @@ public class PlayerScript : MonoBehaviour
     public Rigidbody playerRigidbody;
     public Animator playerAnimator;
 
+    public int maxVelocity;
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -33,6 +35,11 @@ public class PlayerScript : MonoBehaviour
             playerAnimator.SetBool("isRunning", true);
         }else{
              playerAnimator.SetBool("isRunning", false);
+        }
+        
+        //cap velocity so player isnt too hard to control
+        if(playerRigidbody.velocity.sqrMagnitude > maxVelocity){
+            playerRigidbody.velocity *= 0.99f;
         }
     }
 }

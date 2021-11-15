@@ -34,7 +34,7 @@ public class FloorMovement : MonoBehaviour
         var rotateVector = new Vector3(vertical, 0.0f, -horizontal);
 
         //rotate the floor accordingly
-        this.transform.Rotate(rotateVector * 20 * Time.deltaTime); 
+        this.transform.Rotate(rotateVector * speed * Time.deltaTime); 
         }
     }
 

@@ -22,6 +22,9 @@
 # Visual Studio cache directory
 .vs/
 
+#imported assets
+/Assets/SimpleCollectiblesPack*
+/Assets/Supercyan Character Pack Free Sample*
 # Gradle cache directory
 .gradle/
 
