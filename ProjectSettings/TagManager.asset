@@ -6,6 +6,7 @@ TagManager:
   tags:
   - pause
   - ring
+  - bundleCoins
   layers:
   - Default
   - TransparentFX

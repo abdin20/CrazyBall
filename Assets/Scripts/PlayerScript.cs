@@ -31,7 +31,7 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerRigidbody.velocity.magnitude>=0.01){
+        if(playerRigidbody.velocity.magnitude>=0.02){
             playerAnimator.SetBool("isRunning", true);
         }else{
              playerAnimator.SetBool("isRunning", false);

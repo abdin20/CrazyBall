@@ -9,15 +9,14 @@ public class TimedRingScript : MonoBehaviour
 
     public int score;
 
-    public AudioSource audioData;
-    public AudioClip win;
+    public GameObject camera;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-          //get audio source component
-        audioData = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -38,8 +37,8 @@ public class TimedRingScript : MonoBehaviour
                  GlobalVariables.ringStarted=true;
              }
 
-
-            audioData.Play(0);
+            //play sound with camera
+            camera.GetComponent<CameraScript>().playTimedCoinSound();
 
              //increase score by 1
              GlobalVariables.currScore+=score;  
@@ -56,11 +55,12 @@ public class TimedRingScript : MonoBehaviour
                     GlobalVariables.timeRemaining=10.0f;
                     GlobalVariables.ringStarted=false;
                     GlobalVariables.ringsLeft=3;
-                  audioData.PlayOneShot(win);
+                    //play sound with camera
+                   camera.GetComponent<CameraScript>().playCompleteTimedRingSound();
 
              }
             //  //destroy coin
-             Destroy (this.gameObject,audioData.clip.length);
+             Destroy (this.gameObject);
 
 
          }

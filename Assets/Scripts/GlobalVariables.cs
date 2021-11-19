@@ -26,6 +26,11 @@ public static class GlobalVariables
     //reset to 10.0f on full restart
     public static float timeRemaining=10.0f;
 
+    //variable to keep track of magnet
+    public static bool magnetLevelOne=false;
+
+    public static bool magnetLevelTwo=true;
+
 
 
 }
