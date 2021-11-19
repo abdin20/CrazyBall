@@ -53,6 +53,9 @@ ExportedObj/
 *.fbx.meta
 *.png
 *.mat.meta
+*.FBX
+*.meta
+*.mat
 
 # Unity3D generated file on crash reports
 sysinfo.txt
