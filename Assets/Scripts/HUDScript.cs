@@ -37,7 +37,7 @@ public class HUDScript : MonoBehaviour
          timer.GetComponent<TMP_Text>().text="Time: "+GlobalVariables.gameTimer.ToString();
         
         //only show ability timer if it started countdown
-         if(GlobalVariables.abilityTimer<3f){
+         if(GlobalVariables.abilityTimer<GlobalVariables.abilityTime){
             abilityTimer.GetComponent<TMP_Text>().text="Ability Time: "+GlobalVariables.abilityTimer.ToString();
          }else{
              abilityTimer.GetComponent<TMP_Text>().text="";

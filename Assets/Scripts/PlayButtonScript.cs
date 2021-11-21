@@ -19,14 +19,16 @@ public class PlayButtonScript : MonoBehaviour
     //method to load scene 1
     public void playLevelOne(){
         GlobalVariables.expertMode=false;
+        Time.timeScale=1f;
         SceneManager.LoadScene("LevelOne");
     }
     //method to load expert mode
     public void playExpertLevelOne(){
+        Time.timeScale=1f;
         GlobalVariables.expertMode=true;
         SceneManager.LoadScene("LevelOne");
     }
-    
+
     //method to add coins for debugging
     public void addCoins(){
         GlobalVariables.savedScore+=1000;

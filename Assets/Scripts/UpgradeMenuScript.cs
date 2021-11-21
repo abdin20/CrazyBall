@@ -81,7 +81,6 @@ public class UpgradeMenuScript : MonoBehaviour
         //unlock magnet ability only if enough balance
         if(!GlobalVariables.boughtPlayerAbility && GlobalVariables.savedScore>=250){
             GlobalVariables.boughtPlayerAbility=true;
-            GlobalVariables.playerAbility=true;
             GlobalVariables.savedScore-=250;
         }
     }    

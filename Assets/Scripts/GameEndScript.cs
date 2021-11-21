@@ -53,6 +53,7 @@ public class GameEndScript : MonoBehaviour
              isPlayerWin=true;
 
             //show win screen and play sound effect
+            Time.timeScale = 1f;
             parentPlayerObject.GetComponent<AudioSource>().Stop();
             mainCamera.GetComponent<CameraScript>().playWinSound();
             gameEndScreen.SetActive(true);

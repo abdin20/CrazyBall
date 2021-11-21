@@ -675,6 +675,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123798800}
   m_CullTransparentMesh: 1
+--- !u!1 &161793186 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3201595745234070774, guid: 6f573441cc3dd3342b2cb1b232d3151a, type: 3}
+  m_PrefabInstance: {fileID: 1721311340}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &198864434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -689,6 +694,10 @@ PrefabInstance:
     - target: {fileID: 4567233627110838641, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
       propertyPath: m_Name
       value: BundleOfGold (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567233627110838641, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
+      propertyPath: m_TagString
+      value: bundleCoins
       objectReference: {fileID: 0}
     - target: {fileID: 4570918150267131563, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
       propertyPath: m_RootOrder
@@ -762,6 +771,10 @@ PrefabInstance:
     - target: {fileID: 4567233627110838641, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
       propertyPath: m_Name
       value: BundleOfGold (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567233627110838641, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
+      propertyPath: m_TagString
+      value: bundleCoins
       objectReference: {fileID: 0}
     - target: {fileID: 4570918150267131563, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
       propertyPath: m_RootOrder
@@ -982,7 +995,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234616348}
   m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
-  m_LocalPosition: {x: 2.233, y: 1.873, z: -14.41}
+  m_LocalPosition: {x: 2.233, y: 1.981, z: -14.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1005,6 +1018,12 @@ MonoBehaviour:
   mainPlayer: {fileID: 0}
   parentPlayerObject: {fileID: 1326764675}
   playerDistance: {x: 0, y: 0, z: 0}
+  floor1: {fileID: 24964157}
+  floor2: {fileID: 822098266}
+  floor3: {fileID: 161793186}
+  floor4: {fileID: 903686827}
+  floor5: {fileID: 1724289518}
+  floor6: {fileID: 739013003}
   audioData: {fileID: 0}
   normalRingSound: {fileID: 8300000, guid: f54aa0e4336967c47b354d037ade2956, type: 3}
   bundleCoinSound: {fileID: 8300000, guid: ce6e41f9c38a39e479ac6f8fc06099a2, type: 3}
@@ -1034,7 +1053,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.173
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1309,9 +1328,9 @@ RectTransform:
   m_Father: {fileID: 1265700734}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 405.3, y: -200.3}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -146.70001, y: 58.699997}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &337374130
@@ -1576,9 +1595,9 @@ RectTransform:
   m_Father: {fileID: 1265700734}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 188.1, y: 205.3}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -363.9, y: -53.699997}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &430920566
@@ -1797,9 +1816,9 @@ RectTransform:
   m_Father: {fileID: 1265700734}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 405.3, y: 208.7}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -146.70001, y: -50.300003}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &462973733
@@ -2080,9 +2099,9 @@ RectTransform:
   m_Father: {fileID: 1265700734}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -441.5, y: 147}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 110.5, y: -112}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &580243826
@@ -2333,6 +2352,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BundleOfGold
       objectReference: {fileID: 0}
+    - target: {fileID: 4567233627110838641, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
+      propertyPath: m_TagString
+      value: bundleCoins
+      objectReference: {fileID: 0}
     - target: {fileID: 4570918150267131563, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2423,9 +2446,9 @@ RectTransform:
   m_Father: {fileID: 1265700734}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 102.9, y: -194.2}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 102.9, y: 64.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &627543830
@@ -2691,6 +2714,10 @@ PrefabInstance:
     - target: {fileID: 4567233627110838641, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
       propertyPath: m_Name
       value: BundleOfGold (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567233627110838641, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
+      propertyPath: m_TagString
+      value: bundleCoins
       objectReference: {fileID: 0}
     - target: {fileID: 4570918150267131563, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
       propertyPath: m_RootOrder
@@ -3354,6 +3381,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BundleOfGold
       objectReference: {fileID: 0}
+    - target: {fileID: 4567233627110838641, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
+      propertyPath: m_TagString
+      value: bundleCoins
+      objectReference: {fileID: 0}
     - target: {fileID: 4570918150267131563, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3431,7 +3462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &955496892
 Transform:
   m_ObjectHideFlags: 0
@@ -3440,7 +3471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955496891}
   m_LocalRotation: {x: -0, y: 0.9999007, z: -0, w: -0.014094636}
-  m_LocalPosition: {x: 2.67, y: 0.779, z: -14.123}
+  m_LocalPosition: {x: 2.67, y: 0.836, z: -14.123}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 1770097580}
@@ -3455,7 +3486,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955496891}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -3655,9 +3686,9 @@ RectTransform:
   m_Father: {fileID: 1265700734}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -441.6, y: 208.7}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 110.399994, y: -50.300003}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1005445287
@@ -4186,9 +4217,9 @@ RectTransform:
   m_Father: {fileID: 1265700734}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -441.6, y: 89}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 110.399994, y: -170}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1231805147
@@ -4485,7 +4516,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3302628e9764fba4987835370d6ff868, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.075
+  m_Volume: 0.157
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4601,9 +4632,9 @@ RectTransform:
   m_Father: {fileID: 1265700734}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -48, y: 190}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -48, y: -69}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1454466135
@@ -5562,6 +5593,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BundleOfGold
       objectReference: {fileID: 0}
+    - target: {fileID: 4567233627110838641, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
+      propertyPath: m_TagString
+      value: bundleCoins
+      objectReference: {fileID: 0}
     - target: {fileID: 4570918150267131563, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5634,6 +5669,10 @@ PrefabInstance:
     - target: {fileID: 4567233627110838641, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
       propertyPath: m_Name
       value: BundleOfGold
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567233627110838641, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
+      propertyPath: m_TagString
+      value: bundleCoins
       objectReference: {fileID: 0}
     - target: {fileID: 4570918150267131563, guid: 3e9f487f64f0abc498177c747377366d, type: 3}
       propertyPath: m_RootOrder
@@ -6163,7 +6202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!135 &1303800820724200982
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6234,7 +6273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303800820724200981}
   m_LocalRotation: {x: -0, y: 0.9999007, z: -0, w: -0.014094636}
-  m_LocalPosition: {x: 2.67, y: 0.61, z: -14.123}
+  m_LocalPosition: {x: 2.67, y: 0.87, z: -14.123}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 505666921}
@@ -6249,7 +6288,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303800820724200981}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1

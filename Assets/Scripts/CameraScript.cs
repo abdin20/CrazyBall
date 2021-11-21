@@ -10,6 +10,14 @@ public class CameraScript : MonoBehaviour
     public GameObject parentPlayerObject;
     public Vector3 playerDistance;
 
+    //floor tiles;
+    public GameObject floor1;
+    public GameObject floor2;
+    public GameObject floor3;
+    public GameObject floor4;
+    public GameObject floor5;
+    public GameObject floor6;
+
     //audio data and files
     public AudioSource audioData;
     public AudioClip normalRingSound;
@@ -89,7 +97,7 @@ public class CameraScript : MonoBehaviour
             //once timer reaches 0 disable ability
             if( GlobalVariables.abilityTimer<=0f){
                 GlobalVariables.playerAbility=false;
-                GlobalVariables.abilityTimer=10f;
+                GlobalVariables.abilityTimer=GlobalVariables.abilityTime;
             }
         }
 
@@ -111,10 +119,11 @@ public class CameraScript : MonoBehaviour
         if(isPlayerDead){
             timeDead+=Time.deltaTime;
             //if 5 seconds passed then reset level
-            if(timeDead>=5f){
+            if(timeDead>=1.5f){
                 gameEndScreen.SetActive(false);
                 timeDead=0f;
                 //reset level once death screen has been shown for enough time
+                audioData.Stop();
                 parentPlayerObject.GetComponent<AudioSource>().Play(0);
                 resetLevel();
             }
@@ -145,13 +154,14 @@ public class CameraScript : MonoBehaviour
     public void restartLevel(){
 
         //reset level variables
+        Time.timeScale=1f;
         GlobalVariables.gameTimer=0f;
         GlobalVariables.checkpoints=0;
         GlobalVariables.currScore=0;
         GlobalVariables.ringsLeft=3;
         GlobalVariables.ringStarted=false;
         GlobalVariables.timeRemaining=10.0f;
-        GlobalVariables.abilityTimer=3f;
+        GlobalVariables.abilityTimer=GlobalVariables.abilityTime;
         GlobalVariables.cooldownTimer=GlobalVariables.cooldownTimer;
         GlobalVariables.coinsCollected=0;
         
@@ -163,6 +173,17 @@ public class CameraScript : MonoBehaviour
     //reset level, need to determing if we are fully restarting or loading a checkpoint
     private void resetLevel(){
 
+
+            //reset floors to  default rotation
+            floor1.transform.rotation=Quaternion.identity;
+            floor2.transform.rotation=Quaternion.identity;
+            floor3.transform.rotation=Quaternion.identity;
+            floor4.transform.rotation=Quaternion.identity;
+            floor5.transform.rotation=Quaternion.identity;
+            floor6.transform.rotation=Quaternion.identity;
+            //reset playervelocity to 0f
+            Rigidbody playerRigidbody = mainPlayer.GetComponent<Rigidbody>();
+            playerRigidbody.velocity*=0f;
             //reset the disappearing floors
             checkpointTwoFloor.GetComponent<DisappearingFloorScript>().resetFloor();
             otherDisappearingFloor.GetComponent<DisappearingFloorScript>().resetFloor();

@@ -7,6 +7,7 @@ public class CanonBallScript : MonoBehaviour
     public float lifeTime;
     public float elapsedTime;
     public Collider canonCollider;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {   
@@ -16,10 +17,19 @@ public class CanonBallScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {    
+    {   
+        //get player gameobject
+         player=GameObject.FindWithTag("Player");
         //update elapsed time
         elapsedTime+=Time.deltaTime;
 
+        float playerDistance=Vector3.Distance(this.transform.position,player.transform.position);
+        Debug.Log(playerDistance);
+
+        //if within distance of player destroy itself if ability is active
+        if(playerDistance<=2f && GlobalVariables.playerAbility){
+            Destroy(this.gameObject);
+        }
         //self destruct canonballs after lifetime
         if(elapsedTime>=lifeTime){
             Destroy(this.gameObject);
@@ -28,9 +38,6 @@ public class CanonBallScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {   
-        //on collision with player, destroy only if ability is active
-        if(collision.gameObject.tag=="Player" && GlobalVariables.playerAbility){
-            Destroy(this.gameObject);
-        }
+
     }
 }

@@ -40,7 +40,8 @@ public static class GlobalVariables
     public static bool playerAbility=false;
 
     //reset always
-    public static float abilityTimer=3f;
+    public static float abilityTimer=6f;
+    public static float abilityTime=6f;
     //reset always
     public static float cooldownTimer=10f;
     //reset always
