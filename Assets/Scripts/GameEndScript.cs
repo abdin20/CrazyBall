@@ -15,6 +15,7 @@ public class GameEndScript : MonoBehaviour
     public Texture gameWinImage;
     public bool isPlayerWin;
     public float elapsedTime;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {   
@@ -24,7 +25,7 @@ public class GameEndScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {    
+    {    player=GameObject.FindWithTag("Player");
         //if player won wait 5 seconds then return to main menu
         if(isPlayerWin){
             elapsedTime+=Time.deltaTime;
@@ -38,7 +39,7 @@ public class GameEndScript : MonoBehaviour
                 GlobalVariables.ringsLeft=3;
                 GlobalVariables.ringStarted=false;
                 GlobalVariables.timeRemaining=10.0f;
-                GlobalVariables.abilityTimer=3f;
+                GlobalVariables.abilityTimer=GlobalVariables.abilityTime;
                 GlobalVariables.cooldownTimer=GlobalVariables.cooldownTimer;
                 GlobalVariables.coinsCollected=0;
                 SceneManager.LoadScene("MainMenu");
@@ -54,6 +55,9 @@ public class GameEndScript : MonoBehaviour
 
             //show win screen and play sound effect
             Time.timeScale = 1f;
+            
+            //reset player position so it doesnt die while in end screen LOL
+            player.transform.position=new Vector3(100,1000,100);
             parentPlayerObject.GetComponent<AudioSource>().Stop();
             mainCamera.GetComponent<CameraScript>().playWinSound();
             gameEndScreen.SetActive(true);

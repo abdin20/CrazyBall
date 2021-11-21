@@ -33,4 +33,10 @@ public class PlayButtonScript : MonoBehaviour
     public void addCoins(){
         GlobalVariables.savedScore+=1000;
     }
+
+    //method to quit application
+    public void Quit(){
+        //quit the application
+        Application.Quit();
+    }
 }

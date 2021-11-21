@@ -21,7 +21,7 @@ public static class GlobalVariables
     public static float gameTimer=0f;
 
     //update after every complete game
-    public static int savedScore=9999; //balance used in shop
+    public static int savedScore=0; //balance used in shop
 
     //reset to 3 on full restart
     public static int ringsLeft=3;

@@ -56,7 +56,7 @@ public class PauseScript : MonoBehaviour
     public void Menu(){
 
         //load game scene when play is pressed
-        Time.timeScale = 1f;
+        Time.timeScale = 0f;
         GlobalVariables.gameTimer=0f;
         GlobalVariables.checkpoints=0;
         GlobalVariables.currScore=0;
@@ -85,7 +85,7 @@ public class PauseScript : MonoBehaviour
         GlobalVariables.ringsLeft=3;
         GlobalVariables.ringStarted=false;
         GlobalVariables.timeRemaining=10.0f;
-        GlobalVariables.abilityTimer=3f;
+        GlobalVariables.abilityTimer=GlobalVariables.abilityTime;
         GlobalVariables.cooldownTimer=GlobalVariables.cooldownTimer;
         GlobalVariables.coinsCollected=0;
         Scene scene = SceneManager.GetActiveScene();
