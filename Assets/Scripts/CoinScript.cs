@@ -67,7 +67,8 @@ public class CoinScript : MonoBehaviour
              
 
              //increase score by 1
-             GlobalVariables.currScore+=score;  
+            GlobalVariables.currScore+=score;
+            GlobalVariables.coinsCollected+=1;
             //  //destroy coin
              Destroy (this.gameObject);
          }

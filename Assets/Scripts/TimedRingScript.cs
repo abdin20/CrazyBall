@@ -41,7 +41,8 @@ public class TimedRingScript : MonoBehaviour
             camera.GetComponent<CameraScript>().playTimedCoinSound();
 
              //increase score by 1
-             GlobalVariables.currScore+=score;  
+             GlobalVariables.currScore+=score;
+             GlobalVariables.coinsCollected+=1;
 
              //decrease rings left by 1
              GlobalVariables.ringsLeft-=1;

@@ -18,9 +18,9 @@ public class PlayerScript : MonoBehaviour
     {   
         //get the player model that is active 
         if(GlobalVariables.skin1==true){
-            mainPlayer=player1;
-        }else{
             mainPlayer=player2;
+        }else{
+            mainPlayer=player1;
         }
 
         //get components
@@ -30,8 +30,9 @@ public class PlayerScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if(playerRigidbody.velocity.magnitude>=0.02){
+    {   
+        //only show running animation if reached certain velocity
+        if(playerRigidbody.velocity.magnitude>=0.01f){
             playerAnimator.SetBool("isRunning", true);
         }else{
              playerAnimator.SetBool("isRunning", false);

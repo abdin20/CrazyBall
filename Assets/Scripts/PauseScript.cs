@@ -56,6 +56,16 @@ public class PauseScript : MonoBehaviour
     public void Menu(){
 
         //load game scene when play is pressed
+        Time.timeScale = 1f;
+        GlobalVariables.gameTimer=0f;
+        GlobalVariables.checkpoints=0;
+        GlobalVariables.currScore=0;
+        GlobalVariables.ringsLeft=3;
+        GlobalVariables.ringStarted=false;
+        GlobalVariables.timeRemaining=10.0f;
+        GlobalVariables.abilityTimer=3f;
+        GlobalVariables.cooldownTimer=GlobalVariables.cooldownTimer;
+        GlobalVariables.coinsCollected=0;
         SceneManager.LoadScene("MainMenu");
     }
 
@@ -67,8 +77,17 @@ public class PauseScript : MonoBehaviour
         pauseMenu.SetActive(false);
         HUD.SetActive(true);
 
-        //reset checkpoint value
+        //reset level variables
+        Time.timeScale=1f;
+        GlobalVariables.gameTimer=0f;
         GlobalVariables.checkpoints=0;
+        GlobalVariables.currScore=0;
+        GlobalVariables.ringsLeft=3;
+        GlobalVariables.ringStarted=false;
+        GlobalVariables.timeRemaining=10.0f;
+        GlobalVariables.abilityTimer=3f;
+        GlobalVariables.cooldownTimer=GlobalVariables.cooldownTimer;
+        GlobalVariables.coinsCollected=0;
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }

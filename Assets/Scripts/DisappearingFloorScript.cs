@@ -11,12 +11,15 @@ public class DisappearingFloorScript : MonoBehaviour
     public float lifeTime;
     public float elapsedTime;
 
+    public Vector3 originalPosition;
+
     // Start is called before the first frame update
     void Start()
     {
         playerHere=false;
         playerTouched=false;
         elapsedTime=0f;
+        originalPosition=this.transform.position;
     }
 
     // Update is called once per frame
@@ -30,8 +33,10 @@ public class DisappearingFloorScript : MonoBehaviour
 
             //check to see if floor was here for longer than lifespan since player got on 
             if(elapsedTime>=lifeTime){
-            Destroy(this.gameObject);
+            //move the floor to somewhere far to simulate it disappearing
+            this.transform.position=new Vector3(100,100,100);
          }
+
         }
       
 
@@ -59,6 +64,16 @@ public class DisappearingFloorScript : MonoBehaviour
      
 
         }
+    }
+
+    //method ot reset floor to default positions 
+    public void resetFloor(){
+        //reset timer 
+        this.playerTouched=false;
+        this.elapsedTime=0f;
+        //set to original position
+        this.transform.position=originalPosition;
+        this.transform.rotation=(Quaternion.identity);
     }
 
     //method to check if player is here on collision

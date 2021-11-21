@@ -11,21 +11,23 @@ public class MovingFloorScript : MonoBehaviour
 
     public float range;
 
-    public float startingY;
+    public float startingX;
+
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         playerHere=false;
-        startingY=this.transform.position.y;
+        startingX=this.transform.position.x;
     }
 
     // Update is called once per frame
     void Update()
     {   
-        //calculate new y position using trig
-        float nextYPosition= Mathf.Sin(Time.time*movingSpeed)* range + startingY;
+        //calculate new x position using trig
+        float nextXPosition= Mathf.Sin(Time.time*movingSpeed)* range + startingX;
 
-        this.transform.position=new Vector3(this.transform.position.x,nextYPosition,this.transform.position.z);
+        this.transform.position=new Vector3(nextXPosition,this.transform.position.y,this.transform.position.z);
 
         //if the player is here on the floor and we are unpaused
         if(playerHere && Time.timeScale==1f){
@@ -48,6 +50,8 @@ public class MovingFloorScript : MonoBehaviour
         //rotate the floor accordingly
         this.transform.Rotate(rotateVector * speed * Time.deltaTime); 
         }
+
+        
     }
 
     //method to check if player is here on collision
@@ -55,6 +59,7 @@ public class MovingFloorScript : MonoBehaviour
         //check if player is here
          if(other.gameObject.tag=="Player"){
              this.playerHere=true;    
+             player=other.gameObject;
          }
     }
 
